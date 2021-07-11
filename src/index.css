@@ -8,16 +8,16 @@
 
 body {
 	font-family: "Poppins", sans-serif;
+	background-color: #eff0f4;
 }
 
 .container {
 	max-width: 500px;
 	margin: 30px auto;
-	overflow: auto;
-	min-height: 300px;
-	border: 1px solid steelblue;
+	border-radius: 50px;
+	background: #eff0f4;
+	box-shadow: 9px 9px 16px #bfc0c3, -9px -9px 16px #ffffff;
 	padding: 30px;
-	border-radius: 5px;
 }
 
 .header {
@@ -29,15 +29,17 @@ body {
 
 .btn {
 	display: inline-block;
-	background: #000;
-	color: #fff;
+	border-radius: 50px;
+	background: #eff0f4;
+	box-shadow: 3px 3px 5px #cbcccf, -3px -3px 5px #ffffff;
+	color: #9ca3b5;
 	border: none;
 	padding: 10px 20px;
 	margin: 5px;
-	border-radius: 5px;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 18px;
+	font-weight: bold;
 	font-family: inherit;
 }
 
@@ -55,7 +57,9 @@ body {
 }
 
 .task {
-	background: #f4f4f4;
+	border-radius: 25px;
+	background: #eff0f4;
+	box-shadow: 3px 3px 5px #cbcccf, -1px -1px 2px #ffffff;
 	margin: 5px;
 	padding: 10px 20px;
 	cursor: pointer;
@@ -83,12 +87,20 @@ body {
 	display: block;
 }
 
-.form-control input {
+.form-control .formss input {
 	width: 100%;
 	height: 40px;
 	margin: 5px;
-	padding: 3px 7px;
+	padding: 3px 25px;
 	font-size: 17px;
+	font-family: inherit;
+	border: none;
+	border-radius: 50px;
+	background: #eff0f4;
+	box-shadow: inset 3px 3px 5px #cbcccf, inset -3px -3px 5px #ffffff;
+}
+.form-control .formss input:focus {
+	outline: none;
 }
 
 .form-control-check {

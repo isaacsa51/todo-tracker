@@ -10,7 +10,7 @@ const Task = ({ task, onDelete, onToggle }) => {
 				{task.title}{" "}
 				<FaTimes
 					onClick={() => onDelete(task.id)}
-					style={{ color: "red", cursor: "pointer" }}
+					style={{ color: "#af1212", cursor: "pointer" }}
 				/>
 			</h3>
 
