@@ -26,40 +26,54 @@ const AddTask = ({ onAdd }) => {
 	return (
 		<form className="add-form" onSubmit={onSubmit}>
 			<div className="form-control">
-				<label>Task title</label>
+				<label>
+					<strong>Task title</strong>
+				</label>
 
-				<input
-					type="text"
-					placeholder="Description"
-					value={title}
-					onChange={(e) => setTitle(e.target.value)}
-				/>
+				<div className="formss">
+					<input
+						type="text"
+						placeholder="Description"
+						value={title}
+						onChange={(e) => setTitle(e.target.value)}
+					/>
+				</div>
 			</div>
 
 			<div className="form-control">
-				<label>Task description</label>
+				<label>
+					<strong>Task description</strong>
+				</label>
 
-				<input
-					type="text"
-					placeholder="Description"
-					value={desc}
-					onChange={(e) => setDesc(e.target.value)}
-				/>
+				<div className="formss">
+					<input
+						type="text"
+						placeholder="Description"
+						value={desc}
+						onChange={(e) => setDesc(e.target.value)}
+					/>
+				</div>
 			</div>
 
 			<div className="form-control">
-				<label>Day & Time</label>
+				<label>
+					<strong>Day & Time</strong>
+				</label>
 
-				<input
-					type="date"
-					placeholder="Add date of the task"
-					value={day}
-					onChange={(e) => setDay(e.target.value)}
-				/>
+				<div className="formss">
+					<input
+						type="date"
+						placeholder="Add date of the task"
+						value={day}
+						onChange={(e) => setDay(e.target.value)}
+					/>
+				</div>
 			</div>
 
 			<div className="form-control form-control-check">
-				<label>Set reminder</label>
+				<label>
+					<strong>Set reminder</strong>
+				</label>
 
 				<input
 					type="checkbox"
