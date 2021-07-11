@@ -1,22 +1,24 @@
 import { useState } from "react";
 
 const AddTask = ({ onAdd }) => {
-	const [text, setText] = useState("");
+	const [title, setTitle] = useState("");
+	const [desc, setDesc] = useState("");
 	const [day, setDay] = useState("");
 	const [reminder, setReminder] = useState(false);
 
 	const onSubmit = (e) => {
 		e.preventDefault();
 
-		if (!text) {
-			alert("Add a valid task!");
+		if (!title || !desc) {
+			alert("Add a valid task to save!");
 			return;
 		}
 
-		onAdd({ text, day, reminder });
+		onAdd({ title, desc, day, reminder });
 
 		//Clear form
-		setText("");
+		setTitle("");
+		setDesc("");
 		setDay("");
 		setReminder(false);
 	};
@@ -24,13 +26,24 @@ const AddTask = ({ onAdd }) => {
 	return (
 		<form className="add-form" onSubmit={onSubmit}>
 			<div className="form-control">
-				<label>Task</label>
+				<label>Task title</label>
 
 				<input
 					type="text"
-					placeholder="Add Task"
-					value={text}
-					onChange={(e) => setText(e.target.value)}
+					placeholder="Description"
+					value={title}
+					onChange={(e) => setTitle(e.target.value)}
+				/>
+			</div>
+
+			<div className="form-control">
+				<label>Task description</label>
+
+				<input
+					type="text"
+					placeholder="Description"
+					value={desc}
+					onChange={(e) => setDesc(e.target.value)}
 				/>
 			</div>
 
@@ -38,7 +51,7 @@ const AddTask = ({ onAdd }) => {
 				<label>Day & Time</label>
 
 				<input
-					type="text"
+					type="date"
 					placeholder="Add date of the task"
 					value={day}
 					onChange={(e) => setDay(e.target.value)}
