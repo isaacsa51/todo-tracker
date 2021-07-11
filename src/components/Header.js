@@ -1,14 +1,14 @@
 import Button from "./Button";
 
-const Header = () => {
-	const onClick = () => {
-		console.log("click");
-	};
-
+const Header = ({ onAdd, toggleShow }) => {
 	return (
 		<header className="header">
 			<h1>TODO Tracker</h1>
-			<Button onClick={onClick} color="green" title="Add" />
+			<Button
+				onClick={onAdd}
+				color={toggleShow ? "red" : "green"}
+				title={toggleShow ? "Close" : "Add"}
+			/>
 		</header>
 	);
 };
